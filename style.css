@@ -2,3 +2,108 @@
     margin: 0;
     padding: 0;
 }
+
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    font-family: Arial;
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+
+.menu a {
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+/* sumir com os subitens */
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* os subitens reaparecem ao passar do mouse  */
+.menu ul  li:hover ul {
+    visibility: visible;
+}
+
+.menu a:hover {
+   background-color: rgb(66, 66, 66);
+}
+
+.menu ul ul li {
+    float: none;
+    border: solid 1px #ccc;
+}
+
+
+label[for="bt-menu"] {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+/* DEIXA O CHECKBOX INVISIVEL */
+#bt-menu {
+    display: none;
+}
+
+label[for="bt-menu"] {
+    display: none;
+}
+
+/* REGRA DE RESPONSIVIDADE */
+@media(max-width: 800px) {
+    /* QUANDO A TELA TIVER MENOR ELE FICA VISIVEL */
+    label[for="bt-menu"] {
+        display: block;
+    }
+
+    /* QUANDO O BOTAO TIVER CHECADO ELE CHAMAM O BOTAO MENU */
+    #bt-menu:checked ~ .menu {
+        margin-left: 0;
+    }
+
+     /* AFASTA O BOTAO DO MENU */
+    .menu {
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu ul li {
+        width: 100%;
+        float: none;
+    }
+
+    /* RESETAR O POSITION DO MENU AO SEU PARDÃO */
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+}
