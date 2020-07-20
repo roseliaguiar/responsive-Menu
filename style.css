@@ -29,13 +29,13 @@
     color: white;
 }
 
-/* sumir com os subitens */
+/* SUMIR COM OS SUBITENS */
 .menu ul ul {
     position: absolute;
     visibility: hidden;
 }
 
-/* os subitens reaparecem ao passar do mouse  */
+/* OS SUBITENS REAPARECEM AO PASSAR DO MOUSE  */
 .menu ul  li:hover ul {
     visibility: visible;
 }
