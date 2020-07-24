@@ -78,7 +78,7 @@ label[for="bt-menu"] {
         display: block;
     }
 
-    /* QUANDO O BOTAO TIVER CHECADO ELE CHAMAM O BOTAO MENU */
+    /* QUANDO O BOTAO TIVER CHECADO ELE CHAMA O BOTAO MENU */
     #bt-menu:checked ~ .menu {
         margin-left: 0;
     }
@@ -94,7 +94,7 @@ label[for="bt-menu"] {
         float: none;
     }
 
-    /* RESETAR O POSITION DO MENU AO SEU PARDÃO */
+    /* RESETAR O POSITION DO MENU AO SEU PADRÃO */
     .menu ul ul {
         position: static;
         overflow: hidden;
